@@ -1,20 +1,22 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#">NavBar</b-navbar-brand>
+      <b-container>
+        <b-navbar-brand href="#">NavBar</b-navbar-brand>
 
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-        </b-navbar-nav>
+        <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav>
+          </b-navbar-nav>
 
-        <!-- Right aligned nav items -->
-        <b-navbar-nav class="ml-auto">
-          <b-nav-item><router-link to="/" exact>Home</router-link></b-nav-item>
-          <b-nav-item><router-link to="/user/10">User</router-link></b-nav-item>
-        </b-navbar-nav>
-      </b-collapse>
+          <!-- Right aligned nav items -->
+          <b-navbar-nav class="ml-auto">
+            <b-nav-item to="/" exact>Home</b-nav-item>
+            <b-nav-item to="/user/10">User</b-nav-item>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-container>
     </b-navbar>
   </div>
 </template>
@@ -24,10 +26,4 @@ export default {};
 </script>
 
 <style lang="scss">
-.router-link {
-  &-active,
-  &-hover  {
-    color: white;
-  }
-}
 </style>
