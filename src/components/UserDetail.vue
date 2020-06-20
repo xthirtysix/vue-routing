@@ -1,7 +1,18 @@
 <template>
   <div>
     <p>User loaded has ID: {{$route.params.id}}</p>
-    <b-button @click="goBack" variant="info">Back</b-button>
+    <b-button
+      :to="{name: 'userEdit'}"
+      variant="primary"
+    >
+      Edit
+    </b-button>
+    <b-button
+      @click="goBack"
+      variant="info"
+    >
+      Back
+    </b-button>
   </div>
 </template>
 
@@ -9,7 +20,7 @@
 export default {
   methods: {
     goBack() {
-      this.$router.push('/users');
+      this.$router.push({ name: 'home' });
     },
   },
 };
