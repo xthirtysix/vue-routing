@@ -22,7 +22,9 @@ export default [
     children: [
       { path: '', component: UserStart, name: 'home' },
       { path: ':id', component: UserDetail },
-      { path: ':id/edit', component: UserEdit, name: 'userEdit' },
+      {
+        path: ':id/edit', component: UserEdit, name: 'userEdit',
+      },
     ],
   },
   { path: '*', redirect: '/' },
