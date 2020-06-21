@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h2>User{{$route.params.id}} edit page</h2>
+    <h2>Edit User{{ $route.params.id }}</h2>
+    <p>Locale: {{ $route.query.locale }}</p>
+    <p>Analytics: {{ $route.query.q }}</p>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-navbar/>
+    <app-navbar id="navbar"/>
     <b-container style="margin-bottom: auto">
       <transition name="slide" mode="out-in">
         <router-view/>
@@ -23,7 +23,7 @@ export default {
 @import './scss/style.scss';
 
 #app {
-  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -37,20 +37,16 @@ export default {
   margin-bottom: 2rem;
 }
 
-.container {
-  // overflow: hidden;
-}
-
 .slide-enter {
   opacity: 0;
 }
 
 .slide-enter-active {
-  animation: slide-in 0.6s ease-in-out forwards;
+  animation: slide-in 0.3s ease-in-out forwards;
 }
 
 .slide-leave-active {
-  animation: slide-out 0.5s ease-out forwards;
+  animation: slide-out 0.3s ease-out forwards;
 }
 
 @keyframes slide-in {
